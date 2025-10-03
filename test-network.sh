@@ -4,6 +4,7 @@
 # Usage: ./download_timing.sh <url>
 
 URL=$1
+HOST=$(hostname)
 
 if [[ -z "$URL" ]]; then
   echo "Usage: $0 <url>"
@@ -17,7 +18,7 @@ if ! command -v curl &> /dev/null; then
 fi
 
 echo
-echo "===== Download Timing Analysis for: $URL ====="
+echo "===== Download Timing Analysis for: $HOST ====="
 echo
 
 # Use a multi-line variable for curl's --write-out format for readability.
