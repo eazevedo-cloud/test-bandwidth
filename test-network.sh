@@ -8,6 +8,12 @@ if [[ -z "$URL" ]]; then
   exit 1
 fi
 
+echo
+
+# Show banner with machine hostname
+echo "===== Download Timing Script on Host: $(hostname) ====="
+echo
+
 # Extract hostname for DNS resolving timing
 HOSTNAME=$(echo "$URL" | awk -F/ '{print $3}')
 
